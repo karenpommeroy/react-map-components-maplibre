@@ -62,7 +62,7 @@ const defaultProps: MapLibreMapProps = {
  */
 const MapLibreMap: FC<MapLibreMapProps> = (props: MapLibreMapProps) => {
 	const mapRef = useRef<MapLibreGlWrapper>();
-	const mapContainer = useRef<HTMLElement>();
+	const mapContainer = useRef<HTMLDivElement>();
 
 	const mapContext = useContext<MapContextType>(MapContext);
 
@@ -89,7 +89,7 @@ const MapLibreMap: FC<MapLibreMapProps> = (props: MapLibreMapProps) => {
 
 		if (mapContainer.current) {
 			initializedRef.current = true;
-			mapContainer.current.__proto__ = HTMLElement.prototype;
+			(mapContainer.current as any).__proto__ = HTMLElement.prototype;
 			mapRef.current = new MapLibreGlWrapper({
 				mapOptions: {
 					style: '',
@@ -129,7 +129,7 @@ const MapLibreMap: FC<MapLibreMapProps> = (props: MapLibreMapProps) => {
 
 	return (
 		<div
-			ref={mapContainer as RefObject<HTMLElement>}
+			ref={mapContainer as RefObject<HTMLDivElement>}
 			className="mapContainer"
 			style={props.style}
 		/>
