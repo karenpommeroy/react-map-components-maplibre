@@ -27,6 +27,7 @@ interface createJsPdfOptions extends createExportOptions {
 }
 export type { createJsPdfOptions };
 interface createPdfResolverParams extends createJsPdfOptions {
+    formData: FormData;
     pdf: jsPDF;
     downloadPdf: (_options?: downloadPdfOptions) => Promise<downloadPdfOptions>;
 }

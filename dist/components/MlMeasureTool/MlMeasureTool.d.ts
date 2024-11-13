@@ -1,7 +1,7 @@
-/// <reference types="react" />
+import React from 'react';
 import * as turf from '@turf/turf';
 import { GeoJSONObject } from '@turf/turf';
-interface MlMeasureToolProps {
+export interface MlMeasureToolProps {
     /**
      * String that specify if the Tool measures an area ("polygon") or length ("line")
      */
@@ -18,10 +18,15 @@ interface MlMeasureToolProps {
         value: number;
         unit: string | undefined;
         geojson: GeoJSONObject;
+        geometries?: [];
     }) => void;
+    /**
+     * Callback function that is called by the end of drawing geometries.
+     */
+    onFinish?: () => void;
 }
 declare const MlMeasureTool: {
-    (props: MlMeasureToolProps): JSX.Element;
+    (props: MlMeasureToolProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         measureType: string;

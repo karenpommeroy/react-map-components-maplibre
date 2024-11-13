@@ -1,5 +1,5 @@
 import { FeatureCollection } from '@turf/turf';
-interface useGpxProps {
+export interface useGpxProps {
     /**
      * a string containing GPX data that is supposed to be parsed and converted to GeoJSON by this hook
      */

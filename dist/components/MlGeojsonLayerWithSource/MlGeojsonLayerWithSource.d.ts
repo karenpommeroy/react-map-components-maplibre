@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 export interface MlGeojsonLayerWithSourceProps {
     /**
      * Id of the target MapLibre instance in mapContext
@@ -15,7 +15,7 @@ export interface MlGeojsonLayerWithSourceProps {
  *
  */
 declare const MlGeojsonLayerWithSource: {
-    (props: MlGeojsonLayerWithSourceProps): JSX.Element;
+    (props: MlGeojsonLayerWithSourceProps): React.JSX.Element;
     defaultProps: {
         mapId: string;
     };

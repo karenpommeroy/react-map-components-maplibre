@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { FeatureCollection } from '@turf/turf';
 import { MetadataType } from '../../hooks/useGpx/useGpx';
 export interface MlGpxViewerProps {
@@ -25,7 +25,7 @@ export interface MlGpxViewerProps {
  * MlGpxViewer visualizes a given GPX Track on the map
  */
 declare const MlGpxViewer: {
-    (props: MlGpxViewerProps): JSX.Element;
+    (props: MlGpxViewerProps): React.JSX.Element;
     defaultProps: {};
 };
 export default MlGpxViewer;

@@ -5,5 +5,5 @@ export interface TopToolbarProps {
     buttons?: React.ReactNode;
     logo?: React.ReactNode;
 }
-declare function TopToolbar(props: TopToolbarProps): JSX.Element;
+declare function TopToolbar(props: TopToolbarProps): React.JSX.Element;
 export default TopToolbar;

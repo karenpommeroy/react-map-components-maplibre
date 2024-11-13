@@ -1,13 +1,16 @@
-/// <reference types="react" />
+import React from 'react';
 import { LayerSpecification } from 'maplibre-gl';
 import { VectorSourceSpecification } from 'maplibre-gl';
+export type ExtendedLayerSpecification = LayerSpecification & {
+    masterVisible?: boolean;
+};
 export type MlVectorTileLayerProps = {
     mapId?: string;
     insertBeforeLayer?: string;
     layerId?: string;
     sourceOptions?: VectorSourceSpecification;
     url?: string;
-    layers: LayerSpecification[];
+    layers: ExtendedLayerSpecification[];
 };
 /**
  * Adds a vector-tile source and 0...n vector-tile-layers to the MapLibre instance referenced by
@@ -15,5 +18,5 @@ export type MlVectorTileLayerProps = {
  *
  * @component
  */
-declare const MlVectorTileLayer: (props: MlVectorTileLayerProps) => JSX.Element;
+declare const MlVectorTileLayer: (props: MlVectorTileLayerProps) => React.JSX.Element;
 export default MlVectorTileLayer;

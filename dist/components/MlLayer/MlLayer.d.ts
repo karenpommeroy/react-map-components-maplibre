@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { useLayerProps } from '../../hooks/useLayer';
 import { Feature, FeatureCollection } from '@turf/turf';
 interface MlLayerProps {
@@ -29,5 +29,5 @@ interface MlLayerProps {
  *
  * @category Map components
  */
-declare const MlLayer: (props: MlLayerProps) => JSX.Element;
+declare const MlLayer: (props: MlLayerProps) => React.JSX.Element;
 export default MlLayer;

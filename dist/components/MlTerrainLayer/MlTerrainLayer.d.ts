@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { TerrainSpecification } from 'maplibre-gl';
 interface MlTerrainLayerProps {
     /**
@@ -20,7 +20,7 @@ export type { MlTerrainLayerProps };
  *
  */
 declare const MlTerrainLayer: {
-    (props: MlTerrainLayerProps): JSX.Element;
+    (props: MlTerrainLayerProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };

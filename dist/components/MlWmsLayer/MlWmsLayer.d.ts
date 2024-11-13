@@ -1,7 +1,7 @@
-/// <reference types="react" />
+import React from 'react';
 import PropTypes from 'prop-types';
 import { RasterLayerSpecification, RasterSourceSpecification } from 'maplibre-gl';
-interface MlWmsLayerProps {
+export interface MlWmsLayerProps {
     urlParameters?: {
         [key: string]: string;
     };
@@ -31,7 +31,7 @@ interface MlWmsLayerProps {
  * @component
  */
 declare const MlWmsLayer: {
-    (props: MlWmsLayerProps): JSX.Element;
+    (props: MlWmsLayerProps): React.JSX.Element;
     defaultProps: {
         visible: boolean;
         urlParameters: {

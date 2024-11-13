@@ -4,7 +4,7 @@ import Moveable from 'react-moveable';
 import useMap from '../../../hooks/useMap';
 import useMapState from '../../../hooks/useMapState';
 import * as turf from '@turf/turf';
-import { PdfPreviewOptions } from './pdfContext';
+import { PdfPreviewOptions } from './pdfContextType';
 import {  LngLatLike, Map as MapType, PointLike } from 'maplibre-gl';
 import { Feature, Units } from '@turf/turf';
 

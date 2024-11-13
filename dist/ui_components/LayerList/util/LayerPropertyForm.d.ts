@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { CircleLayerSpecification, FillLayerSpecification, LineLayerSpecification } from 'maplibre-gl';
 export type paintPropsType = CircleLayerSpecification['paint'] | FillLayerSpecification['paint'] | LineLayerSpecification['paint'];
 interface LayerPropertyFormProps {
@@ -6,5 +6,5 @@ interface LayerPropertyFormProps {
     setPaintProps: (paintProps: paintPropsType | ((current: paintPropsType) => paintPropsType)) => void;
     layerType: string;
 }
-declare function LayerPropertyForm({ paintProps, setPaintProps }: LayerPropertyFormProps): JSX.Element;
+declare function LayerPropertyForm({ paintProps, setPaintProps }: LayerPropertyFormProps): React.JSX.Element;
 export default LayerPropertyForm;

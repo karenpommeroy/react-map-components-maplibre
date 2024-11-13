@@ -1,4 +1,11 @@
-export default MlWmsFeatureInfoPopup;
+import React from "react";
+import PropTypes from "prop-types";
+export interface MlWmsFeatureInfoPopupProps {
+    /**
+     * Id of the target MapLibre instance in mapContext
+     */
+    mapId?: string;
+}
 /**
  * TODO: Add short & useful description
  *
@@ -7,16 +14,16 @@ export default MlWmsFeatureInfoPopup;
  *
  * @component
  */
-declare function MlWmsFeatureInfoPopup(props: {
-    mapId: string;
-}): JSX.Element;
-declare namespace MlWmsFeatureInfoPopup {
-    namespace defaultProps {
-        const mapId: undefined;
-    }
-    namespace propTypes {
-        const mapId_1: PropTypes.Requireable<string>;
-        export { mapId_1 as mapId };
-    }
-}
-import PropTypes from "prop-types";
+declare const MlWmsFeatureInfoPopup: {
+    (props: MlWmsFeatureInfoPopupProps): React.JSX.Element;
+    defaultProps: {
+        mapId: undefined;
+    };
+    propTypes: {
+        /**
+         * Id of the target MapLibre instance in mapContext
+         */
+        mapId: PropTypes.Requireable<string>;
+    };
+};
+export default MlWmsFeatureInfoPopup;

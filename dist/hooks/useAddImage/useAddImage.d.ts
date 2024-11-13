@@ -5,7 +5,7 @@ export interface useAddImageProps {
     imageId: string;
     /**
      *
-    */
+     */
     imagePath: string;
 }
 /**

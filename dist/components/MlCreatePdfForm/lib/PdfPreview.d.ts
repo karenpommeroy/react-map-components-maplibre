@@ -1,5 +1,5 @@
 import React from 'react';
-import { PdfPreviewOptions } from './pdfContext';
+import { PdfPreviewOptions } from './pdfContextType';
 import { Feature } from '@turf/turf';
 type Props = {
     /**
@@ -22,5 +22,5 @@ type Props = {
 /**
  * PdfPreview component renders a transformable (drag, scale, rotate) preview of the desired export or print content
  */
-export default function PdfPreview(props: Props): JSX.Element;
+export default function PdfPreview(props: Props): React.JSX.Element;
 export {};

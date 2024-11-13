@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { LayerConfig } from 'src/contexts/LayerContext';
 export interface AddLayerPopupProps {
     open: boolean;
@@ -9,7 +9,7 @@ export interface AddLayerPopupProps {
     onComplete?: (config: LayerConfig) => void;
 }
 declare const AddLayerPopup: {
-    (props: AddLayerPopupProps): JSX.Element;
+    (props: AddLayerPopupProps): React.JSX.Element;
     defaultProps: {};
 };
 export default AddLayerPopup;

@@ -1,4 +1,4 @@
-import { RequestParameters, ResponseCallback } from 'maplibre-gl';
+import { RequestParameters } from 'maplibre-gl';
 declare const parseTileParams: (url: string) => {
     filename: string;
     z: string;
@@ -27,7 +27,7 @@ declare function getBufferFromMbtiles(params: {
  *
  * 'mbtiles://mbtiles/countries.mbtiles/{z}/{x}/{y}'
  */
-declare const mbTilesProtocolHandler: (params: RequestParameters, callback: ResponseCallback<any>) => {
-    cancel: () => void;
-};
+declare const mbTilesProtocolHandler: (params: RequestParameters) => Promise<{
+    data: {};
+}>;
 export { mbTilesProtocolHandler, parseTileParams, getBufferFromMbtiles, getMbtilesDbHandler };

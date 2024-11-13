@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { SxProps } from '@mui/material';
 export interface MlNavigationToolsProps {
     /**
@@ -43,7 +43,7 @@ export interface MlNavigationToolsProps {
  * @component
  */
 declare const MlNavigationTools: {
-    (props: MlNavigationToolsProps): JSX.Element;
+    (props: MlNavigationToolsProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         show3DButton: boolean;

@@ -7,6 +7,7 @@ interface SidebarProps {
     open?: boolean;
     setOpen?: (val: boolean) => void;
     name?: string;
+    drawerBleeding?: number;
 }
-export default function Sidebar({ drawerPaperProps, drawerHeaderProps, setOpen, ...props }: SidebarProps & DrawerProps): JSX.Element;
+export default function Sidebar({ drawerPaperProps, drawerHeaderProps, setOpen, ...props }: SidebarProps & DrawerProps): React.JSX.Element;
 export {};

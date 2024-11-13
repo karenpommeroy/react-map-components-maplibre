@@ -1,14 +1,14 @@
-/// <reference types="react" />
-import { SxProps } from '@mui/material';
-interface StepObject {
+import React from 'react';
+import { BubbleForInstructionProps } from './BubbleForInstructions';
+export interface StepObject {
     duration: number;
-    props: SxProps;
+    props: BubbleForInstructionProps;
     content: JSX.Element;
 }
-interface InstructionProps {
-    steps: Array<StepObject>;
+export interface InstructionProps {
+    steps: StepObject[];
     open: boolean;
     callback?: () => void;
 }
-declare const Instructions: (props: InstructionProps) => JSX.Element;
+declare const Instructions: (props: InstructionProps) => React.JSX.Element;
 export default Instructions;

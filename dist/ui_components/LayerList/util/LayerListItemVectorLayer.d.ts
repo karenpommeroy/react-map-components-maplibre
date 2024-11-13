@@ -1,23 +1,8 @@
 import React from 'react';
 import { MlVectorTileLayerProps } from '../../../components/MlVectorTileLayer/MlVectorTileLayer';
-export declare const ListItemStyled: import("@emotion/styled").StyledComponent<{
-    button?: false | undefined;
-} & import("@mui/material").ListItemBaseProps & {
-    components?: {
-        Root?: React.ElementType<any> | undefined;
-    } | undefined;
-    componentsProps?: {
-        root?: (React.HTMLAttributes<HTMLDivElement> & import("@mui/material").ListItemComponentsPropsOverrides) | undefined;
-    } | undefined;
-    slotProps?: {
-        root?: (React.HTMLAttributes<HTMLDivElement> & import("@mui/material").ListItemComponentsPropsOverrides) | undefined;
-    } | undefined;
-    slots?: {
-        root?: React.ElementType<any> | undefined;
-    } | undefined;
-} & import("@mui/material/OverridableComponent").CommonProps & Omit<Pick<React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "key" | keyof React.LiHTMLAttributes<HTMLLIElement>> & {
+export declare const ListItemStyled: import("@emotion/styled").StyledComponent<import("@mui/material").ListItemOwnProps & import("@mui/material/OverridableComponent").CommonProps & Omit<Omit<React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "ref"> & {
     ref?: ((instance: HTMLLIElement | null) => void) | React.RefObject<HTMLLIElement> | null | undefined;
-}, "className" | "style" | "classes" | "button" | "children" | "disabled" | "sx" | "alignItems" | "autoFocus" | "ContainerComponent" | "ContainerProps" | "dense" | "disableGutters" | "disablePadding" | "divider" | "secondaryAction" | "selected" | "components" | "componentsProps" | "slotProps" | "slots"> & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
+}, "className" | "style" | "classes" | "children" | "components" | "componentsProps" | "slotProps" | "slots" | "alignItems" | "ContainerComponent" | "ContainerProps" | "dense" | "disableGutters" | "disablePadding" | "divider" | "secondaryAction" | "sx"> & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
 export declare const CheckboxListItemIcon: import("@emotion/styled").StyledComponent<import("@mui/material").ListItemIconProps & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
 export declare const CheckboxStyled: import("@emotion/styled").StyledComponent<import("@mui/material").CheckboxProps & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
 interface LayerListItemVectorLayerProps {
@@ -27,7 +12,7 @@ interface LayerListItemVectorLayerProps {
     setVtProps: ((state: unknown) => void) | undefined;
     visibleMaster?: boolean;
 }
-declare function LayerListItemVectorLayer({ configurable, vtProps, setVtProps, id, ...props }: LayerListItemVectorLayerProps): JSX.Element;
+declare function LayerListItemVectorLayer({ configurable, vtProps, setVtProps, id, ...props }: LayerListItemVectorLayerProps): React.JSX.Element;
 declare namespace LayerListItemVectorLayer {
     var defaultProps: {
         configurable: boolean;

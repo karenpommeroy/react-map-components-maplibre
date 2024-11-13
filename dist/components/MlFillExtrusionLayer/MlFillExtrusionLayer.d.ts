@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 export interface MlFillExtrusionLayerProps {
     /**
      * Id of the target MapLibre instance in mapContext
@@ -42,7 +42,7 @@ export interface MlFillExtrusionLayerProps {
  *
  */
 declare const MlFillExtrusionLayer: {
-    (props: MlFillExtrusionLayerProps): JSX.Element;
+    (props: MlFillExtrusionLayerProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         paint: {

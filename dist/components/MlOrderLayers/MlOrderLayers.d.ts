@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 export interface MlOrderLayersProps {
     /**
      * Id of the target MapLibre instance in mapContext
@@ -12,7 +12,7 @@ export interface MlOrderLayersProps {
  *
  */
 declare const MlOrderLayers: {
-    (props: MlOrderLayersProps): JSX.Element;
+    (props: MlOrderLayersProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         insertBeforeLayer: undefined;

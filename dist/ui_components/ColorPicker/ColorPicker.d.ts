@@ -1,13 +1,11 @@
-/// <reference types="react" />
+import React from 'react';
 export interface ColorPickerProps {
     onChange?: (value: string) => void;
     convert: 'rgb' | 'rgba' | 'rgba_hex' | 'hex' | 'rgba_rgb';
-    internalValue?: string;
-    setValue?: (value: string) => void;
     value?: string;
 }
 declare const ColorPicker: {
-    ({ convert, ...props }: ColorPickerProps): JSX.Element;
+    ({ convert, ...props }: ColorPickerProps): React.JSX.Element;
     defaultProps: {
         convert: string;
         label: string;

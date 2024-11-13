@@ -1,5 +1,5 @@
 import { useMapType } from './useMap';
-import { SourceSpecification, LayerSpecification, MapMouseEvent, GeoJSONFeature, Style, MapEventType, Map, VideoSourceSpecification, ImageSourceSpecification } from 'maplibre-gl';
+import { GeoJSONSourceSpecification, LayerSpecification, MapMouseEvent, Style, MapEventType, Map, FilterSpecification } from 'maplibre-gl';
 import MapLibreGlWrapper from '../components/MapLibreMap/lib/MapLibreGlWrapper';
 import { GeoJSONObject } from '@turf/turf';
 type getLayerType = Style['getLayer'];
@@ -11,7 +11,7 @@ type useLayerType = {
     mapHook: useMapType;
 };
 export type MapEventHandler = (ev: MapMouseEvent & {
-    features?: GeoJSONFeature[] | undefined;
+    features?: GeoJSON.Feature[] | undefined;
 } & Record<string, unknown>) => void;
 export interface useLayerProps {
     mapId?: string;
@@ -19,10 +19,11 @@ export interface useLayerProps {
     idPrefix?: string;
     insertBeforeLayer?: string;
     insertBeforeFirstSymbolLayer?: boolean;
-    geojson?: GeoJSONObject;
+    geojson?: GeoJSONObject | GeoJSON.Feature | GeoJSON.FeatureCollection;
     options: Partial<LayerSpecification & {
-        source?: Partial<Exclude<SourceSpecification, VideoSourceSpecification | ImageSourceSpecification>>;
+        source?: GeoJSONSourceSpecification | string;
         id?: string;
+        filter?: FilterSpecification;
     }>;
     onHover?: (ev: MapEventType & unknown) => Map | void;
     onClick?: (ev: MapEventType & unknown) => Map | void;

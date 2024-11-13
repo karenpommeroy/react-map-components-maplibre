@@ -1,5 +1,5 @@
-/// <reference types="react" />
+import React from "react";
 declare const GeoJsonProvider: ({ children }: {
     children: JSX.Element;
-}) => JSX.Element;
+}) => React.JSX.Element;
 export default GeoJsonProvider;

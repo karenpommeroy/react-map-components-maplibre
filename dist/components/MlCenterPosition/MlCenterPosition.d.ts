@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 import { SxProps, Theme } from '@mui/material';
 export interface MlCenterPositionProps {
     /**
@@ -28,7 +28,7 @@ export interface MlCenterPositionProps {
  *
  */
 declare const MlCenterPosition: {
-    (props: MlCenterPositionProps): JSX.Element;
+    (props: MlCenterPositionProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };

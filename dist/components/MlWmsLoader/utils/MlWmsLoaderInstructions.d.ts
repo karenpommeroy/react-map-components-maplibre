@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 export default function MlWmsLoaderInstructions(props: {
     open: boolean;
-}): JSX.Element;
+}): React.JSX.Element;

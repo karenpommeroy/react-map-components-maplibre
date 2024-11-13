@@ -1,5 +1,5 @@
-/// <reference types="react" />
-interface MlMarkerProps {
+import React from "react";
+export interface MlMarkerProps {
     /**
      * Id of the target MapLibre instance in mapContext
      */
@@ -26,7 +26,7 @@ interface MlMarkerProps {
  * Adds a marker to the map and displays the contents of the "content" property in an iframe next to it
  */
 declare const MlMarker: {
-    (props: MlMarkerProps): JSX.Element;
+    (props: MlMarkerProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };

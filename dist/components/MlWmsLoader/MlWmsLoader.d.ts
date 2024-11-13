@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { useWmsProps } from '../../hooks/useWms';
 import { Layer2 } from 'wms-capabilities';
 import { useWmsReturnType } from '../../hooks/useWms';
@@ -105,7 +105,7 @@ export type LayerType = {
  * @component
  */
 declare const MlWmsLoader: {
-    (props: MlWmsLoaderProps): JSX.Element;
+    (props: MlWmsLoaderProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         url: string;

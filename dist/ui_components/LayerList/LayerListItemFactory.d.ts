@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { LayerConfig } from '../../contexts/LayerContext';
 import { FitBoundsOptions } from 'maplibre-gl';
 export interface LayerListItemFactoryProps {
@@ -9,7 +9,7 @@ export interface LayerListItemFactoryProps {
     sortable?: boolean;
     fitBoundsOptions?: FitBoundsOptions;
 }
-declare function LayerListItemFactory(props: LayerListItemFactoryProps): JSX.Element;
+declare function LayerListItemFactory(props: LayerListItemFactoryProps): React.JSX.Element;
 declare namespace LayerListItemFactory {
     var defaultProps: {
         mapId: undefined;

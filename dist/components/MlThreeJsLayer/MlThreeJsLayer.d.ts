@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import PropTypes from 'prop-types';
 /**
  * Renders obj or gltf 3D Models on the MapLibreMap referenced by props.mapId
@@ -11,7 +11,7 @@ export interface MlThreeJsLayerProps {
     onDone?: () => void;
 }
 declare const MlThreeJsLayer: {
-    (props: MlThreeJsLayerProps): JSX.Element;
+    (props: MlThreeJsLayerProps): React.JSX.Element;
     propTypes: {
         /**
          * Id of the target MapLibre instance in mapContext

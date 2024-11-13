@@ -19,6 +19,6 @@ MapComponentsProvider must be used one level higher than the first use of MapCon
  */
 declare const MapComponentsProvider: ({ children }: {
     children: ReactNode;
-}) => JSX.Element;
+}) => React.JSX.Element;
 export { MapComponentsProvider };
 export default MapContext;

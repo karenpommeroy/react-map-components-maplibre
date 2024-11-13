@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 export interface DemoDescriptionItem {
     item: string;
     description: string;
@@ -8,5 +8,5 @@ interface DemoDescriptionsProps {
     json: DemoDescriptionItem[];
     title: string;
 }
-declare function DemoDescriptions(props: DemoDescriptionsProps): JSX.Element;
+declare function DemoDescriptions(props: DemoDescriptionsProps): React.JSX.Element;
 export default DemoDescriptions;

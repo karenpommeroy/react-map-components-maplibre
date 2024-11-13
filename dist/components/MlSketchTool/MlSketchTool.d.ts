@@ -1,4 +1,5 @@
-/// <reference types="react" />
+import React from 'react';
+import { Feature } from '@turf/turf';
 import { SxProps } from '@mui/system/styleFunctionSx/styleFunctionSx';
 export interface MlSketchToolProps {
     /**
@@ -15,13 +16,24 @@ export interface MlSketchToolProps {
      * https://mui.com/system/getting-started/the-sx-prop/
      */
     buttonStyleOverride?: SxProps;
+    /**
+     * Callback function that is called each time GeoJson data has changed within MlSketchTool.
+     * First parameter contains all geometries in the `geometries` prop.
+     */
+    onChange?: (para: SketchStateType) => void;
 }
+type SketchStateType = {
+    selectedGeoJson?: Feature;
+    activeGeometryIndex?: number;
+    geometries: Feature[];
+    drawMode?: keyof MapboxDraw.Modes;
+};
 /**
  * Component template
  *
  */
 declare const MlSketchTool: {
-    (props: MlSketchToolProps): JSX.Element;
+    (props: MlSketchToolProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         buttonStyleOverride: {};

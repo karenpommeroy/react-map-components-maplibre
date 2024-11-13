@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { SxProps } from '@mui/material';
 interface LayerListItemProps {
     layerComponent: JSX.Element;
@@ -14,13 +14,13 @@ interface LayerListItemProps {
     layerId?: string;
     sortable?: boolean;
 }
-declare function LayerListItem({ layerComponent, visible, type, name, description, configurable, setLayerState, ...props }: LayerListItemProps): JSX.Element;
+declare function LayerListItem({ layerComponent, visible, type, name, description, configurable, setLayerState, ...props }: LayerListItemProps): React.JSX.Element;
 declare namespace LayerListItem {
     var defaultProps: {
         type: string;
         visible: boolean;
         showDeleteButton: boolean;
-        buttons: JSX.Element;
+        buttons: React.JSX.Element;
     };
 }
 export default LayerListItem;

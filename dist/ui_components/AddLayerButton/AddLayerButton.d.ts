@@ -1,5 +1,5 @@
-/// <reference types="react" />
 import { SxProps } from '@mui/material';
+import React from 'react';
 import { LayerConfig } from '../../contexts/LayerContext';
 export interface AddLayerButtonProps {
     sx?: SxProps;
@@ -11,7 +11,7 @@ export interface AddLayerButtonProps {
     onComplete?: (config: LayerConfig) => void;
 }
 declare const AddLayerButton: {
-    (props: AddLayerButtonProps): JSX.Element;
+    (props: AddLayerButtonProps): React.JSX.Element;
     defaultProps: {};
 };
 export default AddLayerButton;

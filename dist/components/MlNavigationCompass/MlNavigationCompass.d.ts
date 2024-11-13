@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react';
-interface MlNavigationCompassProps {
+import React, { CSSProperties } from 'react';
+export interface MlNavigationCompassProps {
     /**
      * Id of the target MapLibre instance in mapHook
      */
@@ -29,5 +29,5 @@ interface MlNavigationCompassProps {
  *
  * @component
  */
-declare const MlNavigationCompass: (props: MlNavigationCompassProps) => JSX.Element;
+declare const MlNavigationCompass: (props: MlNavigationCompassProps) => React.JSX.Element;
 export default MlNavigationCompass;

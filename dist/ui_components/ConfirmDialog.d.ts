@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import * as React from 'react';
 export interface ConfirmDialogProps {
     open: boolean;
     title: string;
@@ -6,7 +6,7 @@ export interface ConfirmDialogProps {
     onConfirm: () => void;
     onCancel: () => void;
 }
-declare function ConfirmDialog(props: ConfirmDialogProps): JSX.Element;
+declare function ConfirmDialog(props: ConfirmDialogProps): React.JSX.Element;
 declare namespace ConfirmDialog {
     var defaultProps: {
         title: string;

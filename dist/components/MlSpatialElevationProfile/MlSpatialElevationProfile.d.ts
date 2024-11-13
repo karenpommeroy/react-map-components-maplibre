@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { Feature, FeatureCollection } from '@turf/turf';
 /**
  * MlSpatialElevationProfile returns a Button that will add a standard OSM tile layer to the maplibre-gl instance.
@@ -32,7 +32,7 @@ export interface MlSpatialElevationProfileProps {
     insertBeforeLayer?: string;
 }
 declare const MlSpatialElevationProfile: {
-    (props: MlSpatialElevationProfileProps): JSX.Element;
+    (props: MlSpatialElevationProfileProps): React.JSX.Element;
     defaultProps: {
         elevationFactor: number;
     };

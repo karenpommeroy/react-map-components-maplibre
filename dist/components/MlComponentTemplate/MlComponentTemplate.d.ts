@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 export interface MlComponentTemplateProps {
     /**
      * Id of the target MapLibre instance in mapContext
@@ -10,7 +10,7 @@ export interface MlComponentTemplateProps {
  *
  */
 declare const MlComponentTemplate: {
-    (props: MlComponentTemplateProps): JSX.Element;
+    (props: MlComponentTemplateProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };

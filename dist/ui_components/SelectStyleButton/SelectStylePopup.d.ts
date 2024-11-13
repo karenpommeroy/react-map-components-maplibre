@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { StyleSpecification } from 'maplibre-gl';
 export interface SelectStylePopupProps {
     open: boolean;
@@ -10,7 +10,7 @@ export interface SelectStylePopupProps {
     };
 }
 declare const SelectStylePopup: {
-    (props: SelectStylePopupProps): JSX.Element;
+    (props: SelectStylePopupProps): React.JSX.Element;
     defaultProps: {
         styleThumbnailPaths: {};
     };

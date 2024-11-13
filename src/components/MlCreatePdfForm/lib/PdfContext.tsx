@@ -1,6 +1,6 @@
 import React, { useState, useRef, useMemo } from 'react';
 import templates from './pdf.templates';
-import { PdfContextInterface, PdfPreviewOptions } from './pdfContext';
+import { PdfContextInterface, PdfPreviewOptions } from './pdfContextType';
 
 
 const PdfContext = React.createContext<PdfContextInterface>({} as PdfContextInterface);

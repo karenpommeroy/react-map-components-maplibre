@@ -1,10 +1,10 @@
-/// <reference types="react" />
+import React from 'react';
 export interface LayerTypeFormProps {
     onSelect: (type: string) => void;
     layerTypes: string[];
 }
 declare const LayerTypeForm: {
-    (props: LayerTypeFormProps): JSX.Element;
+    (props: LayerTypeFormProps): React.JSX.Element;
     defaultProps: {};
 };
 export default LayerTypeForm;

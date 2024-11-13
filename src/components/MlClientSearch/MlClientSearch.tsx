@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchContextProvider } from './lib/SearchContext';
 import SearchForm from './lib/SearchForm';
-import { SearchContextInterface } from './lib/searchContext';
+import { SearchContextInterface } from './lib/searchContextType';
 
 interface MlClientSearchProps {
 	/**

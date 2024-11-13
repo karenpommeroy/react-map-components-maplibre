@@ -1,6 +1,6 @@
 import { Map, IControl, MapOptions as MapOptionsType, MapEventType, MapLayerEventType, StyleImageInterface, LayerSpecification, CustomLayerInterface, SourceSpecification, ControlPosition, StyleImageMetadata } from 'maplibre-gl';
 import { Map as MapType, Style } from 'maplibre-gl';
-type WrapperEventArgArray = [string, (arg0: unknown) => void];
+type WrapperEventArgArray = [MapLibreGlWrapperEventName, MapLibreGlWrapperEventHandlerType];
 type EventArgArray = [
     keyof MapLayerEventType | keyof MapEventType,
     string | ((arg0: unknown) => void),
@@ -41,7 +41,30 @@ interface MapLibreGlWrapper extends MapType {
     }), beforeId?: string | undefined, componentId?: string | undefined) => this;
     cancelled: boolean;
 }
+interface MapLibreGlWrapperEventHandlers {
+    layerchange: {
+        handler: (ev: unknown) => void;
+        options?: object | string;
+    }[];
+    viewportchange: {
+        handler: (ev: unknown) => void;
+        options?: object | string;
+    }[];
+    addsource: {
+        handler: (ev: unknown, wrapper?: MapLibreGlWrapper, data?: {
+            [source_id: string]: string;
+        }) => void;
+    }[];
+    addlayer: {
+        handler: (ev: unknown) => void;
+        options?: object | string;
+    }[];
+}
+export type MapLibreGlWrapperEventHandlerType = MapLibreGlWrapperEventHandlers['layerchange'][number]['handler'] | MapLibreGlWrapperEventHandlers['viewportchange'][number]['handler'] | MapLibreGlWrapperEventHandlers['addsource'][number]['handler'] | MapLibreGlWrapperEventHandlers['addlayer'][number]['handler'];
+export type MapLibreGlEventName = keyof MapLayerEventType | keyof MapEventType | string;
+export type MapLibreGlWrapperEventName = keyof MapLibreGlWrapperEventHandlers;
 declare class MapLibreGlWrapper {
+    [key: string]: any;
     registeredElements: {
         [key: string]: {
             layers: [string?];
@@ -54,23 +77,15 @@ declare class MapLibreGlWrapper {
     };
     baseLayers: [string?];
     firstSymbolLayer: string | undefined;
-    eventHandlers: {
-        layerchange: {
-            handler: (ev: unknown) => void;
-            options?: object | string;
-        }[];
-        viewportchange: {
-            handler: (ev: unknown) => void;
-        }[];
-    };
+    eventHandlers: MapLibreGlWrapperEventHandlers;
     wrapper: {
-        on: (eventName: string, handler: (ev: unknown) => void, options?: object | string, componentId?: string) => void;
-        off: (type: string, listener: (ev: unknown) => void) => void;
+        on: (eventName: MapLibreGlWrapperEventName, handler: MapLibreGlWrapperEventHandlerType, options?: object | string, componentId?: string) => void;
+        off: (type: string, handler: MapLibreGlWrapperEventHandlerType) => void;
         fire: (eventName: string, context?: unknown) => void;
         layerState: LayerState[];
         layerStateString: string;
         oldLayerStateStrings: object;
-        buildLayerObject: (layer: ReturnType<Style['getLayer']>) => LayerState;
+        buildLayerObject: (layer: ReturnType<Style['getLayer']>) => LayerState | undefined;
         buildLayerObjects: () => LayerState[];
         refreshLayerState: () => void;
         viewportState: ViewportState;
@@ -94,7 +109,7 @@ declare class MapLibreGlWrapper {
     styleJson: object;
     addSource: (id: string, source: SourceSpecification, componentId?: string | undefined) => this;
     addControl: (control: IControl | unknown, position?: ControlPosition | undefined, componentId?: string | undefined) => this;
-    on: (type: keyof MapLayerEventType | keyof MapEventType | string, layerId: string | ((ev: unknown) => void), handler?: ((ev: MapEventType & unknown) => Map | void) | string, componentId?: string | undefined) => this;
+    on: (type: MapLibreGlEventName, layerId: string | ((ev: unknown) => void), handler?: ((ev: MapEventType & unknown) => Map | void) | string, componentId?: string | undefined) => this;
     cleanup: (componentId: string) => void;
     constructor(props: {
         mapOptions: MapOptionsType;

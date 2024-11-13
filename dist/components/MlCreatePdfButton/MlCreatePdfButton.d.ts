@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { createExportOptions } from 'src/hooks/useExportMap/lib';
 export interface MlCreatePdfButtonProps {
     /**
@@ -14,7 +14,7 @@ export interface MlCreatePdfButtonProps {
  * Renders a button that will create a PDF version of the current map view (dimensions adjusted to fit Din A4 Paper).
  */
 declare const MlCreatePdfButton: {
-    (props: MlCreatePdfButtonProps): JSX.Element;
+    (props: MlCreatePdfButtonProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };

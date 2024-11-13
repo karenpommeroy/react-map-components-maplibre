@@ -1,4 +1,4 @@
-import { Cancelable, RequestParameters, ResponseCallback } from 'maplibre-gl';
+import { AddProtocolAction } from 'maplibre-gl';
 export interface useAddProtocolProps {
     /**
      * the protocol string, for example `mbtiles`
@@ -8,7 +8,7 @@ export interface useAddProtocolProps {
     /**
      * Custom load tile function that will be called when using a source that starts with a custom url schema.
      */
-    handler: (requestParameters: RequestParameters, callback: ResponseCallback<any>) => Cancelable;
+    handler: AddProtocolAction;
 }
 /**
  * Enables the use of custom protocols (basically custom tile load functions) in the maplibre-gl-js library.

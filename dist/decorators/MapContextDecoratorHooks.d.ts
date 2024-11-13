@@ -1,2 +1,4 @@
+import "./style.css";
+import { Decorator } from '@storybook/react';
+declare const decorators: Decorator[];
 export default decorators;
-declare const decorators: ((Story: any, context: any) => JSX.Element)[];

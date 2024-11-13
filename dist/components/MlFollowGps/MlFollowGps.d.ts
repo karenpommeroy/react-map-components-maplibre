@@ -1,6 +1,6 @@
-/// <reference types="react" />
+import React from 'react';
 import { CircleLayerSpecification, FillLayerSpecification } from 'maplibre-gl';
-interface MlFollowGpsProps {
+export interface MlFollowGpsProps {
     /**
      * Id of the target MapLibre instance in mapContext
      */
@@ -67,7 +67,7 @@ interface MlFollowGpsProps {
  *
  */
 declare const MlFollowGps: {
-    (props: MlFollowGpsProps): JSX.Element;
+    (props: MlFollowGpsProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         offColor: string;

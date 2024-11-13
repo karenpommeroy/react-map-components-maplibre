@@ -54,6 +54,6 @@ export interface LayerContextType {
     moveLayer: (layerId: string, getNewPos: (oldPos: number) => number) => void;
 }
 declare const LayerContext: React.Context<LayerContextType>;
-declare function LayerContextProvider(props: LayerContextProps): JSX.Element;
+declare function LayerContextProvider(props: LayerContextProps): React.JSX.Element;
 export default LayerContext;
 export { LayerContextProvider };

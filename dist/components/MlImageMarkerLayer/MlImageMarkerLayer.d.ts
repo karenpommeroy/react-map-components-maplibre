@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { SymbolLayerSpecification } from 'maplibre-gl';
 import { Feature, FeatureCollection } from '@turf/turf';
 export interface MlImageMarkerLayerProps {
@@ -35,5 +35,5 @@ export interface MlImageMarkerLayerProps {
         paint?: SymbolLayerSpecification['paint'];
     };
 }
-declare const MlImageMarkerLayer: (props: MlImageMarkerLayerProps) => JSX.Element;
+declare const MlImageMarkerLayer: (props: MlImageMarkerLayerProps) => React.JSX.Element;
 export default MlImageMarkerLayer;

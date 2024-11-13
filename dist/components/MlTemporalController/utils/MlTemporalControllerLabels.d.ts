@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { SymbolLayerSpecification, SymbolLayoutProps } from 'maplibre-gl';
 import { FeatureCollection } from '@turf/turf';
 interface MlTemporalControllerLabelsProps {
@@ -16,5 +16,5 @@ interface MlTemporalControllerLabelsProps {
     labelLayout?: SymbolLayoutProps;
     labelPaint?: SymbolLayerSpecification;
 }
-export default function MlTemporalControllerLabels(props: MlTemporalControllerLabelsProps): JSX.Element;
+export default function MlTemporalControllerLabels(props: MlTemporalControllerLabelsProps): React.JSX.Element;
 export {};

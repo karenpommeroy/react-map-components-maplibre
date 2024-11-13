@@ -23,7 +23,7 @@ import { createPdfResolverParams } from '../../../hooks/useExportMap/lib';
 import * as turf from '@turf/turf';
 
 import templates from './pdf.templates';
-import { PdfPreviewOptions } from './pdfContext';
+import { PdfPreviewOptions } from './pdfContextType';
 
 const scaleOptions = [
 	{

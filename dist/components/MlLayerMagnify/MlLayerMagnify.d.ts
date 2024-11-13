@@ -24,7 +24,7 @@ export interface MlLayerMagnifyProps {
  * the map and can be dragged around on top of the MapLibreMap referenced by props.map1Id
  */
 declare const MlLayerMagnify: {
-    (props: MlLayerMagnifyProps): JSX.Element;
+    (props: MlLayerMagnifyProps): React.JSX.Element;
     defaultProps: {
         magnifierRadius: number;
         magnifierStyle: {};

@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { MlGeoJsonLayerProps } from 'src/components/MlGeoJsonLayer/MlGeoJsonLayer';
 export interface ProtocolHandlerLayerFormProps {
     originType: string;
@@ -7,4 +7,4 @@ export interface ProtocolHandlerLayerFormProps {
     onSubmit: (config: MlGeoJsonLayerProps) => void;
     onCancel: () => void;
 }
-export default function ProtocolHandlerLayerForm(props: ProtocolHandlerLayerFormProps): JSX.Element;
+export default function ProtocolHandlerLayerForm(props: ProtocolHandlerLayerFormProps): React.JSX.Element;

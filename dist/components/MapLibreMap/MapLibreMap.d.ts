@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { MapOptions as MapOptionsType } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-type MapLibreMapProps = {
+export type MapLibreMapProps = {
     /**
      * Id of the MapLibreGl(Wrapper) instance in mapContext
      */

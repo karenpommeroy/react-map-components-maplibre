@@ -19,4 +19,4 @@ export interface TemporalControllerPlayerProps {
     accumulate: boolean;
     display: boolean;
 }
-export default function TemporalControllerPlayer(props: TemporalControllerPlayerProps): JSX.Element;
+export default function TemporalControllerPlayer(props: TemporalControllerPlayerProps): React.JSX.Element;

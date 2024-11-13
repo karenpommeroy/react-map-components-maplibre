@@ -31,5 +31,5 @@ declare module '@mui/material' {
         variant?: 'layerlist';
     }
 }
-declare const getTheme: (mode: 'light' | 'dark') => import("@mui/material").Theme;
+declare const getTheme: (mode: 'light' | 'dark' | undefined) => import("@mui/material").Theme;
 export default getTheme;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import elasticlunr from 'elasticlunr';
-import { SearchContextInterface } from './searchContext.js';
+import { SearchContextInterface } from './searchContextType';
 import * as turf from '@turf/turf';
 import useMap from '../../../hooks/useMap';
 import MlGeoJsonLayer from '../../MlGeoJsonLayer/MlGeoJsonLayer';

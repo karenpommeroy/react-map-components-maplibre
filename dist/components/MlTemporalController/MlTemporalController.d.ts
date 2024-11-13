@@ -160,7 +160,7 @@ export interface TemporalControllerValues {
     paint: CircleLayerSpecification['paint'] | FillLayerSpecification['paint'] | LineLayerSpecification['paint'];
 }
 declare const MlTemporalController: {
-    (props: MlTemporalControllerProps): JSX.Element;
+    (props: MlTemporalControllerProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
         ownLayer: boolean;

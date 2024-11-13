@@ -18,7 +18,7 @@ export interface MlLayerSwipeProps {
  *	creates a split view of 2 synchronised maplibre instances
  */
 declare const MlLayerSwipe: {
-    (props: MlLayerSwipeProps): JSX.Element;
+    (props: MlLayerSwipeProps): React.JSX.Element;
     defaultProps: {
         buttonStyle: {};
     };

@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import PropTypes from 'prop-types';
 export interface MapState {
     lat?: number;
@@ -28,7 +28,7 @@ export interface LayerStatesInterface {
     [key: string]: boolean;
 }
 declare const MlShareMapState: {
-    (props: MlShareMapStateProps): JSX.Element;
+    (props: MlShareMapStateProps): React.JSX.Element;
     defaultProps: {
         mapId: undefined;
     };
